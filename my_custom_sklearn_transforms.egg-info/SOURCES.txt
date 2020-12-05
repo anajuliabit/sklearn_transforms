@@ -7,4 +7,5 @@ my_custom_sklearn_transforms.egg-info/PKG-INFO
 my_custom_sklearn_transforms.egg-info/SOURCES.txt
 my_custom_sklearn_transforms.egg-info/dependency_links.txt
 my_custom_sklearn_transforms.egg-info/not-zip-safe
+my_custom_sklearn_transforms.egg-info/requires.txt
 my_custom_sklearn_transforms.egg-info/top_level.txt
