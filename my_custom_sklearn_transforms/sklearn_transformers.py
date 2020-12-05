@@ -1,6 +1,7 @@
 import pandas as pd
 from imblearn.over_sampling import SMOTE
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.preprocessing import LabelEncoder
 
 
 class DropColumns(BaseEstimator, TransformerMixin):
@@ -29,6 +30,21 @@ class SetIndex(BaseEstimator, TransformerMixin):
         data = X.copy()
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.set_index(self.columns, inplace=True)
+    
+class LabelEncoder(BaseEstimator, TransformerMixin):
+    def __init__(self, columns):
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        # Primeiro realizamos a cópia do dataframe 'X' de entrada
+        data = X.copy()
+        
+        LE = LabelEncoder()
+        # Retornamos um novo dataframe sem as colunas indesejadas
+        return Le.fit(self.columns)
 
 
 class SmoteResample(object):
